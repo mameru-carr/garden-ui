@@ -12,7 +12,18 @@
     "@astrojs/mdx": "^4.3.9",
     "@astrojs/rss": "^4.0.13",
     "@astrojs/sitemap": "^3.6.0",
+    "@fontsource-variable/alegreya": "^5.2.8",
+    "@fontsource-variable/google-sans-code": "^5.2.3",
+    "@fontsource-variable/recursive": "^5.2.8",
+    "@fontsource-variable/ysabeau": "^5.2.8",
+    "@fontsource-variable/ysabeau-sc": "^5.2.7",
+    "@fontsource/cormorant-infant": "^5.2.11",
+    "@fontsource/cormorant-sc": "^5.2.8",
+    "@fontsource/cormorant-unicase": "^5.2.8",
+    "@tailwindcss/vite": "^4.1.16",
     "astro": "^5.15.3",
-    "sharp": "^0.34.3"
+    "sass": "^1.93.3",
+    "sharp": "^0.34.3",
+    "tailwindcss": "^4.1.16"
   }
 }
