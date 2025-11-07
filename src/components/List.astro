@@ -12,7 +12,6 @@ interface Props {
 const posts = (await getCollection(collection)).sort(
     (a, b) => b.data.createdAt - a.data.createdAt
 ).slice(0, top);
-
 ---
 
 <ul class="mt-2">
@@ -21,7 +20,7 @@ const posts = (await getCollection(collection)).sort(
                 <li class="mb-2 px-2">
                     <a href={`/${collection}/${post.id}/`}
                        class="flex flex-col g">
-                        <span class="text-xs title text-gray-400">
+                        <span class="text-xs text-gray-400">
                             { formatDate(post.data.createdAt )}
                         </span>
                         <span class="text-lg title">
