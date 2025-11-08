@@ -8,10 +8,9 @@ import Base from "../layouts/Base.astro";
 import { getCollection } from "astro:content";
 import "@fontsource-variable/google-sans-code";
 import formatDate from "../utils/format-date";
+import {dev} from "astro";
 
-const devLogs = (await getCollection('devLogs')).sort(
-	(a, b) => b.data.date - a.data.date
-)
+const devLogs = await getCollection('devLogs');
 ---
 
 <!doctype html>
@@ -39,10 +38,12 @@ const devLogs = (await getCollection('devLogs')).sort(
 				<p class="text-xs italic font-light">Tinkering with software</p>
 			</div>
 			<ul>
-				{ devLogs[0].data && devLogs[0].data.map((log) => {
+				{ devLogs[0].data && devLogs[0].data
+					.sort((a, b) => b.date - a.date)
+					.map((log) => {
 							return <li class="px-2 mb-2">
-								<span class="text-xs">{formatDate(log.date)}</span>:&nbsp;
-								<span class="text-sm">{log.note}</span>
+								<span class="text-xs">{formatDate(log.date)}:</span>
+								<span class="text-xs col-2">{log.note}</span>
 							</li>
 						})
 				}

@@ -7,11 +7,15 @@ import Header from "../components/Header.astro";
 
 <html lang="en">
     <head>
+        <title>Mameru's Garden</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href='https://fonts.googleapis.com/css2?family=PT+Serif:ital@0;1&display=swap&text="' rel="stylesheet">
         <meta charset="utf-8">
     </head>
     <body>
         <Header />
-            <main class="md:m-4 md:px-4 lg:m-8 lg:px-8">
+            <main class="md:mx-4 md:px-4 lg:mx-8 lg:px-8">
                 <slot />
             </main>
     </body>

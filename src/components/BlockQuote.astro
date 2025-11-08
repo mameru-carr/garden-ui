@@ -1,0 +1,38 @@
+---
+import "@fontsource-variable/alegreya"
+interface Props {
+    quote: string
+    author?: string
+}
+const props = Astro.props
+---
+
+<div class="blockquote">
+    <blockquote>
+        <p class="text-lg italic">&ldquo;{ props.quote }&rdquo;</p>
+        { props.author &&
+                <footer class="text-right">— {props.author}</footer>
+        }
+    </blockquote>
+</div>
+
+<style lang="sass">
+  blockquote
+    font-family: 'Alegreya Variable', serif
+    border-left: 0.25rem solid #49020680
+
+    padding-left: 0.5rem
+
+    &::before
+      content: open-quote
+      font-size: 4em
+      opacity: 0.5
+      line-height: 0.1em
+      vertical-align: -0.4em
+
+    p
+      display: inline
+
+    footer
+
+</style>
